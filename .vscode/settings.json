@@ -1,0 +1,5 @@
+{
+  "launch": {
+    "svelte.language-server.runtime": "node"
+  }
+}
