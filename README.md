@@ -91,3 +91,8 @@ Then, from within your project folder:
 npm run build
 surge public my-project.surge.sh
 ```
+
+## Sources
+
+* [Testing svelte components with jest](https://dev.to/jpblancodb/testing-svelte-components-with-jest-53h3)
+
