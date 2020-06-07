@@ -7,4 +7,5 @@ it('it works', async () => {
   })
 
   expect(getByText("Hello world!")).toBeTruthy()
+  expect(getByText("APP_ENV: test")).toBeTruthy()
 })

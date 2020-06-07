@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "scripts": {
     "build": "rollup -c",
-    "dev": "rollup -c -w",
+    "dev": "NODE_ENV=dev rollup -c -w",
     "start": "sirv public",
     "test:unit": "jest",
     "test:unit:watch": "jest --watchAll"
@@ -13,9 +13,11 @@
     "@babel/preset-env": "^7.10.2",
     "@rollup/plugin-commonjs": "^12.0.0",
     "@rollup/plugin-node-resolve": "^8.0.0",
+    "@rollup/plugin-replace": "^2.3.3",
     "@testing-library/jest-dom": "^5.9.0",
     "@testing-library/svelte": "^3.0.0",
     "babel-jest": "^26.0.1",
+    "custom-env": "^2.0.1",
     "jest": "^26.0.1",
     "jest-transform-svelte": "^2.1.1",
     "node-sass": "^4.14.1",

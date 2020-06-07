@@ -4,7 +4,13 @@ import commonjs from '@rollup/plugin-commonjs';
 import livereload from 'rollup-plugin-livereload';
 import { terser } from 'rollup-plugin-terser';
 
+// Sass
 import autoPreprocess from 'svelte-preprocess';
+
+// Load ENV
+import replace from '@rollup/plugin-replace';
+import CustomEnv from 'custom-env';
+CustomEnv.env()
 
 const production = !process.env.ROLLUP_WATCH;
 
@@ -50,7 +56,17 @@ export default {
 
 		// If we're building for production (npm run build
 		// instead of npm run dev), minify
-		production && terser()
+		production && terser(),
+
+    replace({
+      // stringify the object
+      process: JSON.stringify({
+        env: {
+          isProd: production,
+          ...process.env
+        }
+      }),
+    }),
 	],
 	watch: {
 		clearScreen: false

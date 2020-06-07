@@ -9,4 +9,5 @@ module.exports = {
   verbose: true,
   transformIgnorePatterns: ["node_modules"],
   setupFilesAfterEnv: ["@testing-library/jest-dom/extend-expect"],
+  setupFiles: ["./test/setup.js"],
 };
