@@ -3,8 +3,9 @@
   "version": "0.0.1",
   "scripts": {
     "watch:tailwind": "postcss src/style/tailwind-setup.css -o src/style/tailwind.css -w",
-    "build:tailwind": "NODE_ENV=production postcss src/style/tailwind-setup.css -o src/style/tailwind.css",
-    "build": "npm run build:tailwind && rollup -c",
+    "build:tailwind:prod": "NODE_ENV=production postcss src/style/tailwind-setup.css -o src/style/tailwind.css",
+    "build:tailwind": "postcss src/style/tailwind-setup.css -o src/style/tailwind.css",
+    "build": "npm run build:tailwind:prod && rollup -c",
     "dev": "NODE_ENV=dev rollup -c -w",
     "start": "sirv public",
     "test:unit": "jest",
