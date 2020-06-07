@@ -96,5 +96,6 @@ surge public my-project.surge.sh
 
 * [Testing svelte components with jest](https://dev.to/jpblancodb/testing-svelte-components-with-jest-53h3)
 * [Svelte with sass in vscode](https://daveceddia.com/svelte-with-sass-in-vscode)
-* [Svelte sapper with sass](https://medium.com/@sean_27490/svelte-sapper-with-sass-271fff662da9)
+* [Svelte-sapper-with-sass](https://medium.com/@sean_27490/svelte-sapper-with-sass-271fff662da9)
+* [A simpler way to add tailwindcss to your svelte project](https://dev.to/inalbant/a-simpler-way-to-add-tailwindcss-to-your-svelte-project-11ja)
 

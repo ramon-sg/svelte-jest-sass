@@ -7,9 +7,15 @@
 	<h1>Hello {name}!</h1>
 	<h1>APP_ENV: {appEnv} </h1>
 	<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
+
+	<button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
+		Tailwind Button
+	</button>
 </main>
 
-<style lang='scss'>
+<style lang='scss' global>
+	@import './style/global.scss';
+
 	$h1-color: #ff3e00;
 
 	main {

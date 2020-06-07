@@ -5,8 +5,14 @@
     "build": "rollup -c",
     "dev": "NODE_ENV=dev rollup -c -w",
     "start": "sirv public",
+
     "test:unit": "jest",
-    "test:unit:watch": "jest --watchAll"
+    "test:unit:watch": "jest --watchAll",
+
+    "watch:tailwind": "postcss src/style/tailwind-setup.css -o src/style/tailwind.css -w",
+    "build:tailwind": "NODE_ENV=production postcss src/style/tailwind-setup.css -o src/style/tailwind.css",
+
+    "serve": "run-p dev watch:tailwind"
   },
   "devDependencies": {
     "@babel/core": "^7.10.2",
@@ -21,12 +27,15 @@
     "jest": "^26.0.1",
     "jest-transform-svelte": "^2.1.1",
     "node-sass": "^4.14.1",
+    "npm-run-all": "^4.1.5",
+    "postcss-cli": "^7.1.1",
     "rollup": "^2.3.4",
     "rollup-plugin-livereload": "^1.0.0",
     "rollup-plugin-svelte": "^5.0.3",
     "rollup-plugin-terser": "^5.1.2",
     "svelte": "^3.0.0",
-    "svelte-preprocess": "^3.9.6"
+    "svelte-preprocess": "^3.9.6",
+    "tailwindcss": "^1.4.6"
   },
   "dependencies": {
     "sirv-cli": "^0.4.4"
