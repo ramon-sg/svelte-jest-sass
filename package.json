@@ -2,16 +2,13 @@
   "name": "TODO",
   "version": "0.0.1",
   "scripts": {
-    "build": "rollup -c",
-    "dev": "NODE_ENV=dev rollup -c -w",
-    "start": "sirv public",
-
-    "test:unit": "jest",
-    "test:unit:watch": "jest --watchAll",
-
     "watch:tailwind": "postcss src/style/tailwind-setup.css -o src/style/tailwind.css -w",
     "build:tailwind": "NODE_ENV=production postcss src/style/tailwind-setup.css -o src/style/tailwind.css",
-
+    "build": "npm run build:tailwind && rollup -c",
+    "dev": "NODE_ENV=dev rollup -c -w",
+    "start": "sirv public",
+    "test:unit": "jest",
+    "test:unit:watch": "jest --watchAll",
     "serve": "run-p dev watch:tailwind"
   },
   "devDependencies": {
