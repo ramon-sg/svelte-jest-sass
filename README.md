@@ -16,8 +16,15 @@ This is a project template for [Svelte](https://svelte.dev) apps. It lives at ht
 
 To create a new project based on this template using [degit](https://github.com/Rich-Harris/degit):
 
+
+Install degit
+
 ```bash
-npx degit clouw/svelte-jest-sass template svelte-app
+yarn global add degit
+```
+
+```bash
+yarn exec degit clouw/svelte-jest-sass svelte-app
 cd svelte-app
 ```
 
@@ -30,13 +37,14 @@ Install the dependencies...
 
 ```bash
 cd svelte-app
-npm install
+yarn install
+yarn build:tailwind
 ```
 
 ...then start [Rollup](https://rollupjs.org):
 
 ```bash
-npm run serve
+yarn serve
 ```
 
 Navigate to [localhost:5000](http://localhost:5000).
@@ -46,7 +54,7 @@ Navigate to [localhost:5000](http://localhost:5000).
 To create an optimised version of the app:
 
 ```bash
-npm run build
+yarn build
 ```
 
 ## Sources
