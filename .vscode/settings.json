@@ -1,5 +1,6 @@
 {
   "launch": {
     "svelte.language-server.runtime": "node"
-  }
+  },
+  "svelte.plugin.css.enable":false
 }

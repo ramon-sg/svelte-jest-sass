@@ -4,3 +4,4 @@
 .DS_Store
 /.env.dev
 /src/style/tailwind.css
+/yarn-error.log

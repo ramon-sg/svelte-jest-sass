@@ -38,13 +38,12 @@ Install the dependencies...
 ```bash
 cd svelte-app
 yarn install
-yarn build:tailwind
 ```
 
 ...then start [Rollup](https://rollupjs.org):
 
 ```bash
-yarn serve
+yarn dev
 ```
 
 Navigate to [localhost:5000](http://localhost:5000).
@@ -62,5 +61,5 @@ yarn build
 * [Testing svelte components with jest](https://dev.to/jpblancodb/testing-svelte-components-with-jest-53h3)
 * [Svelte with sass in vscode](https://daveceddia.com/svelte-with-sass-in-vscode)
 * [Svelte sapper with sass](https://medium.com/@sean_27490/svelte-sapper-with-sass-271fff662da9)
-* [A simpler way to add tailwindcss to your svelte project](https://dev.to/inalbant/a-simpler-way-to-add-tailwindcss-to-your-svelte-project-11ja)
+* [Using svelte with tailwindcss a better approach](https://dev.to/sarioglu/using-svelte-with-tailwindcss-a-better-approach-47ph)
 

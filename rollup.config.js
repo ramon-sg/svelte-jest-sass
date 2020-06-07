@@ -4,8 +4,8 @@ import commonjs from '@rollup/plugin-commonjs';
 import livereload from 'rollup-plugin-livereload';
 import { terser } from 'rollup-plugin-terser';
 
-// Sass
-import autoPreprocess from 'svelte-preprocess';
+// Sass and Tailwindcss
+import sveltePreprocess from 'svelte-preprocess';
 
 // Load ENV
 import replace from '@rollup/plugin-replace';
@@ -32,7 +32,7 @@ export default {
 				css.write('public/build/bundle.css');
 			},
 
-			preprocess: autoPreprocess()
+			preprocess: sveltePreprocess({ postcss: true })
 		}),
 
 		// If you have external dependencies installed from
