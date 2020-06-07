@@ -1,32 +1,41 @@
 <script>
 	import Tailwindcss from './components/Tailwindcss.svelte';
+	import Router, {link} from "svelte-spa-router";
 
-	export let name;
+	import active from 'svelte-spa-router/active';
 
-	const appEnv = process.env.APP_ENV
+	import Home from "./routes/Home.svelte";
+	import About from "./routes/About.svelte";
+
+	const routes = {
+		"/": Home,
+		"/about": About,
+	};
+
 </script>
 
 <Tailwindcss />
 
-<main>
-	<h1>Hello {name}!</h1>
-	<h1>APP_ENV: {appEnv} </h1>
-	<p class="py-5">Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
+<div class="container my-10 p-4 m-auto bg-gray-200 text-center">
+	<ul class="flex">
+			<li class="mr-3">
+				<a class="inline-block border border-blue-500 rounded py-1 px-3 text-black-300"
+					use:link
+					use:active={{className: 'bg-blue-300'}}
+					href="/">
+					Home
+				</a>
+			</li>
+			<li class="mr-3">
+				<a class="inline-block border border-blue-500 rounded py-1 px-3 text-black-300"
+					use:link
+					use:active={{className: 'bg-blue-300'}}
+					href="/about">
+					About
+				</a>
+			</li>
+		</ul>
 
-	<button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
-		Tailwind Button
-	</button>
-</main>
+	<Router {routes}/>
+</div>
 
-<style type="text/postcss">
-	main {
-		text-align: center;
-		padding: 1em;
-		max-width: 600px;
-		margin: 0 auto;
-	}
-
-	h1 {
-		@apply text-6xl text-orange-400;
-	}
-</style>

@@ -9,6 +9,7 @@ This template includes:
 * **Sass/Scss**
 * **Dotenv (custom-env)**
 * **Tailwindcss**
+* **Router (svelte-spa-router)**
 
 # svelte app
 
