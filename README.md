@@ -25,7 +25,7 @@ yarn global add degit
 ```
 
 ```bash
-yarn exec degit clouw/svelte-jest-sass svelte-app
+yarn exec degit ramon-sg/svelte-jest-sass svelte-app
 cd svelte-app
 ```
 
